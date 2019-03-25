@@ -44,10 +44,15 @@ sudo rpm -ivh epel-release-latest-7.noarch.rpm
 sudo yum install -y python36 python36-setuptools
 sudo easy_install-3.6 pip
 pip3 install awscli --upgrade --user
+```
+
+You might need to add aws in your PATH: `echo "export PATH=~/.local/bin/:$PATH" >> ~/.bashrc && source ~/.bashrc`
+
+```
 #configure aws cli with a secret:
 aws configure
 ```
-You might need to add aws in your PATH: `echo "export PATH=~/.local/bin/:$PATH" >> ~/.bashrc && source ~/.bashrc`
+During configuration, put eu-west-3 as Region.
 
 ### 4: Configure and run kops
 
